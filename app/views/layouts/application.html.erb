@@ -14,51 +14,10 @@
 
 
 
-<!--nav Section......................................................-->
-
-<nav class = "topbar" data-topbar role="navigation">
-	<ul class = "title-area">
-    	<li class = "name">
-      		<h1><%= link_to "Noise: A Sample App", '#', id: "logo" %></h1>
-      	</li>
-    	<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-   	</ul>  
-
-	<section class="top-bar-section">
-
-	    <!-- Left Nav Section -->
-	    <ul class="left">
-	      <li><%= link_to "Home", '#' %></a></li>
-	    </ul>
-
-	    <ul class="right">
-	      <li><%= link_to "Help", '#' %></li>
-	    </ul> 
-
-     	<ul class="right">
-	      <li><%= link_to "Log in", '#' %></li>
-	    </ul> 
-
- 	 </section>
-</nav>
-	
-
-<!--
-	<div class = "row">
-		<div class = "large-6 columns">
-			<h1>Noise: Sample App</h1>
-		</div>
-		<div class = "large-6 columns">
-
-		</div>
-
-	</div>
-</nav>
--->
-
-
  <body>
+ 	<%= render 'layouts/header' %>
+ 	<%= render 'layouts/messages' %>
     <%= yield %>
-
+	<%= render 'layouts/footer' %>
   </body>
 </html>
