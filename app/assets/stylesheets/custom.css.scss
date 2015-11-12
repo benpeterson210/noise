@@ -1,0 +1,45 @@
+/*= require foundation */
+@import "foundation_and_overrides";
+
+$light-gray: #f2f2f2;
+$white: #fff;
+
+.header.panel {
+  margin: 3rem auto;
+  border: 2px solid #444;
+  background: $light-gray; 
+    p {
+      font: 1rem "proxima nova";
+      padding: 1rem 2rem 2rem 2rem;
+      margin-top: -1.25rem; 
+     
+    span {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 75%;
+      font-weight: bold;
+  	    }
+	}
+  	
+	.sign {
+	    background: $white;
+	    width: 150px;
+	    height: 2.4rem;
+	    border: 2px solid #444;
+	    position: relative;
+	    top: -2.5rem;
+	    margin: auto; 
+    	
+	h1 {
+	      text-transform: uppercase;
+	      font: bolder 0.875rem "Avenir Next";
+	      letter-spacing: 3px;
+	      color: #666;
+	      font-size: 70%;
+	      text-align: center;
+	      line-height: 2rem; 
+	    }
+	}
+}
+
+
