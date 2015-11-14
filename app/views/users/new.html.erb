@@ -1,38 +1,31 @@
 <% provide(:title, 'Sign up') %>
 <h1 class = "text-center">Sign up</h1>
 
+<!--Rails Forms-->
 
-<!--Form for signup page-->
-<form>
+<section>
 	<div class = "row">
 		<div class = "large-4 medium-6 small-centered columns">
-			<label>Name
-				<input type = "text" placeholder = "Enter name">
-			</label>
+			<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages' %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+
+			<%= f.label :email %>
+			<%= f.email_field :email %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password  %>
+
+			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.password_field :password_confirmation  %>
+
+
+			<%= f.submit "Create my account", class: "button expand success radius" %>
+			<% end %>
 		</div>
 	</div>
-	<div class = "row">
-		<div class = "large-4 medium-6 small-centered columns">
-			<label>Email
-				<input type = "text" placeholder = "Enter email">
-			</label>
-		</div>
-	</div>
-	<div class = "row">
-		<div class = "large-4 medium-6 small-centered columns">
-			<label>Password
-				<input type = "text" placeholder = "Enter password">
-			</label>
-		</div>
-	</div>	
-	<div class = "row">
-		<div class = "large-4 medium-6 small-centered columns">
-			<label>Confirm Password
-				<input type = "text" placeholder = "Reenter Password">
-			</label>
-		</div>
-	</div>	
-	<div class = "row text-center">
-		<a href="#" class="button success radius">Create Account</a>
-	</div>
-</form>
+</section>
+
+
