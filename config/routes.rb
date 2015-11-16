@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  #session controller - Chapter 8
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
   root 'static_pages#home'
 
   get 'help' => 'static_pages#help' #routes to Help action in Static_pages_controller.rb
