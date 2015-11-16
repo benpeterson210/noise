@@ -16,7 +16,11 @@
 
  <body>
  	<%= render 'layouts/header' %>
- 	<%= render 'layouts/messages' %>
+
+ 	<% flash.each do |message_type, message| %>
+  <div data-alert class = "alert-box <%= message_type %>"><%= message %></div>
+  <% end %>
+
     <%= yield %>
 	<%= render 'layouts/footer' %>
   <%= debug(params) if Rails.env.development? %>

@@ -10,20 +10,20 @@
 			<%= render 'shared/error_messages' %>
 
 			<%= f.label :name %>
-			<%= f.text_field :name, class: "error" %>
-			<small class="error">Invalid entry</small>
+			<%= f.text_field :name %>
+			
 
 			<%= f.label :email %>
-			<%= f.email_field :email, class: "error" %>
-			<small class="error">Invalid entry</small>
+			<%= f.email_field :email %>
+		
 
 			<%= f.label :password %>
-			<%= f.password_field :password, class: "error" %>
-			<small class="error">Invalid entry</small>
+			<%= f.password_field :password %>
+		
 
-			<%= f.label :password_confirmation, "Confirmation", class: "error" %>
+			<%= f.label :password_confirmation, "Confirmation" %>
 			<%= f.password_field :password_confirmation  %>
-			<small class="error">Invalid entry</small>
+		
 
 
 			<%= f.submit "Create my account", class: "button expand success radius" %>
