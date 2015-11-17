@@ -12,6 +12,13 @@
 		<%= f.label :password %>
 		<%= f.password_field :password %>
 
+		<div class ="switch"></div>
+		<%= f.label :remember_me, type: "checkbox" do %>
+		<%= f.check_box :remember_me %>
+		<span> Remember me on this computer</span>
+		<% end %>
+		
+
 		<%= f.submit "Log in", class: "button success radius" %>
 		
 		<p>New user? <%= link_to "Sign up now!", signup_path %></p>
