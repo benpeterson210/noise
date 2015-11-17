@@ -15,12 +15,13 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
+      log_inMethod @user #defined in sessions_helper.rb
   		flash[:success] = "Welcome to Noise"
   		redirect_to @user
 	
-	else
-		render 'new'
-	end
+	  else
+		  render 'new'
+	  end
   end
 
   private
