@@ -104,3 +104,17 @@ aside {
     margin: 0 0 30px 0;
   }
 }
+
+.users {
+  list-style: none;
+  margin: 0;
+  font-size: 1.5rem;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $light-gray
+
+  }
+
+
+}
