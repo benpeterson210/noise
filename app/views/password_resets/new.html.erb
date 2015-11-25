@@ -1,0 +1,16 @@
+<% provide(:title, "Forgot Password") %>
+<h1 class = "text-center">Forgot Password</h1>
+
+<section>
+	<div class = "row">
+		<div class = "large-4 medium-6 columns small-centered">
+			<%= form_for(:password_reset, url: password_resets_path) do |f| %>
+
+			<%= f.label :email %>
+			<%= f.email_field :email %>
+
+			<%= f.submit "Submit", class: "button success radius" %>
+			<% end %>
+		</div>	
+	</div>
+</section>
